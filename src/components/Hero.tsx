@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import myPic from './assets/myPic.png'
+import myResume from './assets/PradeepVermaResume2025.pdf'
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -12,6 +12,9 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
+      {/* 🔹 Particles Background */}
+      <div id="particles-js" className="absolute inset-0 -z-10"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-1 gap-12 items-center">
           <div className="text-center lg:text-center">
@@ -32,7 +35,7 @@ const Hero = () => {
                 <a href='https://github.com/pradeepcoad' target='_blank'>View My Work</a>
               </button>
               <button className="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-medium hover:border-blue-600 hover:text-blue-600 transition-colors duration-200">
-                <a href={myPic} download={myPic} media={myPic}>Download Resume</a>
+                <a href={myResume} download="PradeepVermaResume.pdf"  media={myResume}>Download Resume</a>
               </button>
             </div>
             <div className="flex justify-center lg:justify-center space-x-4">
