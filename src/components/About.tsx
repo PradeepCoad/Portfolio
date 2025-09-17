@@ -1,60 +1,57 @@
-import React from 'react';
-import { Code, Palette, Server, Smartphone, Calendar, GraduationCap } from 'lucide-react';
+import React,{useRef} from 'react';
+import { Code, Palette, Server, Smartphone, Calendar, GraduationCap, Braces, Wrench, Database, Cloud, ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function About() {
-  // const skills = [
-  //   {
-  //     icon: <Code size={24} />,
-  //     title: 'Frontend Development',
-  //     description: 'React, TypeScript, Tailwind CSS, Html5, Boots',
-  //     color: 'from-blue-500 to-blue-600'
-  //   },
-  //   {
-  //     icon: <Server size={24} />,
-  //     title: 'Backend Development',
-  //     description: 'Node.js, Express, PostgreSQL, MongoDB',
-  //     color: 'from-green-500 to-green-600'
-  //   },
-  //   {
-  //     icon: <Palette size={24} />,
-  //     title: 'UI/UX Design',
-  //     description: 'Figma, Adobe XD, Responsive Design',
-  //     color: 'from-purple-500 to-purple-600'
-  //   },
-  //   {
-  //     icon: <Smartphone size={24} />,
-  //     title: 'Mobile Development',
-  //     description: 'React Native, Flutter, Progressive Web Apps',
-  //     color: 'from-orange-500 to-orange-600'
-  //   }
-  // ];
-
   const skills = [
-{
-icon: <Code size={24} />,
-title: 'Frontend Development',
-description: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
-color: 'from-blue-500 to-blue-600'
-},
-{
-icon: <Server size={24} />,
-title: 'Backend Development',
-description: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB'],
-color: 'from-green-500 to-green-600'
-},
-{
-icon: <Palette size={24} />,
-title: 'UI/UX Design',
-description: ['Figma', 'Adobe XD', 'Responsive Design'],
-color: 'from-purple-500 to-purple-600'
-},
-{
-icon: <Smartphone size={24} />,
-title: 'Mobile Development',
-description: ['React Native', 'Flutter', 'Progressive Web Apps'],
-color: 'from-orange-500 to-orange-600'
-}
-];
+    {
+    icon: <Braces size={24} />,
+    title: 'Programing Languages',
+    description: ['Java', 'Python', 'Go', 'C/C++','C#','JavaScript'],
+    color: 'from-violet-400 to-violet-600'
+    },
+    {
+    icon: <Code size={24} />,
+    title: 'Frontend Development',
+    description: ['React', 'TypeScript', 'Tailwind CSS','Bootstrap','Html5/Css'],
+    color: 'from-blue-500 to-blue-600'
+    },
+    {
+    icon: <Server size={24} />,
+    title: 'Backend Development',
+    description: ['Python','FastAPI','Flask','Asp.Net Core'],
+    color: 'from-green-500 to-green-600'
+    },
+    {
+    icon: <Database size={24} />,
+    title: 'Database',
+    description: ['PostgreSQL','MySQL','Firebase','SQLite'],
+    color: 'from-purple-500 to-purple-600'
+    },
+    {
+    icon: <Palette size={24} />,
+    title: 'UI/UX Design',
+    description: ['Figma', 'Responsive Design','Mordern UI','Clean UI'],
+    color: 'from-rose-400 to-rose-500'
+    },
+    {
+    icon: <Smartphone size={24} />,
+    title: 'Mobile Development',
+    description: ['Java', 'Material UI'],
+    color: 'from-orange-500 to-orange-600'
+    },
+    {
+    icon: <Cloud size={24} />,
+    title: 'Cloud Platforms',
+    description: ['Versel','GitHub'],
+    color: 'from-orange-500 to-orange-600'
+    },
+    {
+    icon: <Wrench size={24} />,
+    title: 'Tools',
+    description: ['VS Code', 'Android Studio','Visual Studio','Figma','Git'],
+    color: 'from-rose-400 to-rose-500'
+    }
+  ];
   const acadmicTimeline = [
     {
       year: 'Now',
@@ -235,6 +232,8 @@ color: 'from-orange-500 to-orange-600'
             </div>
           </div>
         </div>
+
+        {/* work experiance */}
 
       </div>
     </section>
