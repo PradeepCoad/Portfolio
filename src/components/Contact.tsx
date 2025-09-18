@@ -29,20 +29,20 @@ const Contact = () => {
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      value: 'alex.johnson@email.com',
-      link: 'mailto:alex.johnson@email.com'
+      value: 'pradeepverma156p@gmail.com',
+      link: 'mailto:pradeepverma156p@gmail.com'
     },
     {
       icon: <Phone size={24} />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 9315057141',
+      link: 'tel:+919315057141'
     },
     {
       icon: <MapPin size={24} />,
       title: 'Location',
-      value: 'San Francisco, CA',
-      link: '#'
+      value: 'Greater Noida, Sector 1, Uttar Pradesh, India',
+      link: 'https://maps.app.goo.gl/sfZFRGSEVi5kV4LZ8'
     }
   ];
 
@@ -74,6 +74,7 @@ const Contact = () => {
                     <a
                       href={info.link}
                       className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                      target='_blank'
                     >
                       {info.value}
                     </a>

@@ -3,9 +3,9 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Github size={20} />, href: '#', label: 'GitHub' },
-    { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-    { icon: <Mail size={20} />, href: '#', label: 'Email' },
+    { icon: <Github size={20} />, href: 'https://github.com/pradeepcoad', label: 'GitHub' },
+    { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/pradeep-verma-28630a253/', label: 'LinkedIn' },
+    { icon: <Mail size={20} />, href: 'mailto:pradeepverma156p@gmail.com', label: 'Email' },
   ];
 
   const quickLinks = [
@@ -28,10 +28,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand & Description */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Alex Johnson</h3>
+            <h3 className="text-2xl font-bold mb-4">Pradeep Verma</h3>
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Full Stack Developer passionate about creating beautiful, functional web experiences 
-              that make a difference.
+              Full Stack Developer who loves creating smart, user-friendly web apps powered by modern tech and AI.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
@@ -71,7 +70,7 @@ const Footer = () => {
               Have a project in mind? I'd love to hear about it.
             </p>
             <a
-              href="mailto:alex.johnson@email.com"
+              href="mailto:pradeepverma156p@gmail.com"
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
             >
               <Mail size={16} className="mr-2" />
@@ -83,7 +82,7 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 text-sm">
-              © {new Date().getFullYear()} Alex Johnson. All rights reserved.
+              © {new Date().getFullYear()} Pradeep Verma. All rights reserved.
             </p>
             <p className="text-slate-400 text-sm flex items-center mt-4 md:mt-0">
               Made with <Heart size={16} className="mx-1 text-red-500" /> and lots of coffee
