@@ -10,7 +10,9 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    dateOfQuery: new Date().toLocaleDateString(),
+    isChecked:false
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -32,7 +34,7 @@ const Contact = () => {
       toast.success("Form submitted successfully 🎉");
 
       // Reset form
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", subject: "", message: "",dateOfQuery:new Date().toLocaleDateString(),isChecked:false });
     } catch (error) {
       console.error("Error saving data:", error);
       toast.error("Failed to submit ❌");
