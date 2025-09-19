@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-  // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 import { collection, addDoc } from "firebase/firestore";
-import { getFirestore } from "firebase/firestore";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import  { db } from './database'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,38 +21,21 @@ const Contact = () => {
     }));
   };
 
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// Your web app's Firebase configuration
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyAleZBBUbRcuxR5snNFgUHJQI1loYCE2eE",
-    authDomain: "portfolio-cfa12.firebaseapp.com",
-    projectId: "portfolio-cfa12",
-    storageBucket: "portfolio-cfa12.firebasestorage.app",
-    messagingSenderId: "38153401981",
-    appId: "1:38153401981:web:e5f5496a46ed771ad82314"
-  };
-
-  // Initialize Firebase
-  const fbApp = initializeApp(firebaseConfig);
-  const db = getFirestore(fbApp);
-
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
 
     try {
       await addDoc(collection(db, "formSubmissions"), formData);
       console.log("Data saved to Firebase");
 
+      toast.success("Form submitted successfully 🎉");
+
       // Reset form
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Error saving data:", error);
+      toast.error("Failed to submit ❌");
     }
   };
 
@@ -191,6 +174,8 @@ const Contact = () => {
                 ></textarea>
               </div>
               
+              <ToastContainer position="top-right" autoClose={3000} />
+
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2"
